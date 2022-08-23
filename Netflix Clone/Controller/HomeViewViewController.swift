@@ -1,13 +1,13 @@
 //
-//  UpcomingViewController.swift
+//  HomeViewViewController.swift
 //  Netflix Clone
 //
-//  Created by Asadullah Behlim on 11/08/22.
+//  Created by Asadullah Behlim on 23/08/22.
 //
 
 import UIKit
 
-class UpcomingViewController: UIViewController {
+class HomeViewViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
