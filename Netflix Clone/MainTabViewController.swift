@@ -15,7 +15,7 @@ class MainTabViewController: UITabBarController {
         
         view.backgroundColor = .systemYellow
         
-        let vc1 = UINavigationController(rootViewController: HomeViewViewController())
+        let vc1 = UINavigationController(rootViewController: HomeViewController())
         let vc2 = UINavigationController(rootViewController: DownloadsViewController())
         let vc3 = UINavigationController(rootViewController: UpcomingViewController())
         let vc4 = UINavigationController(rootViewController: SearchViewController())
@@ -30,6 +30,7 @@ class MainTabViewController: UITabBarController {
         vc3.title = "Top Searches"
         vc4.title = "Downloads"
         
+   //     tabBar.tintColor = .label
         tabBar.tintColor = .label
         
         setViewControllers([vc1, vc2, vc3, vc4], animated: true)
