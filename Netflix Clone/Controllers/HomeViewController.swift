@@ -19,14 +19,31 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         view.addSubview(homeFeedtable)
-        
         homeFeedtable.delegate = self
         homeFeedtable.dataSource = self
+        
+        configureNavbar()
+        
         let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.height, height: 450))
         
         homeFeedtable.tableHeaderView = headerView
         
     }
+    
+    private func configureNavbar() {
+        var image = UIImage(named: "netflixlogo")
+        image = image?.withRenderingMode(.alwaysOriginal)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .done, target: self, action: nil)
+        
+        navigationItem.rightBarButtonItems = [
+            UIBarButtonItem(image: UIImage(systemName: "person") , style: .done, target: self, action: nil),
+            UIBarButtonItem(image: UIImage(systemName: "play.rectangle"), style: .done, target: self, action: nil)
+            
+        ]
+        navigationController?.navigationBar.tintColor = .white
+        
+    }
+    
     override func viewDidLayoutSubviews() {
         super.viewWillLayoutSubviews()
         homeFeedtable.frame = view.bounds
