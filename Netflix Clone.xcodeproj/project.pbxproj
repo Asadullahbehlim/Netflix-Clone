@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		411A122028DA46ED004DFD80 /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411A121F28DA46ED004DFD80 /* HeroHeaderUIView.swift */; };
 		4140A2B028D84F00000C59EE /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4140A2AF28D84F00000C59EE /* CollectionViewTableViewCell.swift */; };
 		4192C50E28B49F2100681AA6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4192C50D28B49F2100681AA6 /* HomeViewController.swift */; };
 		4192C51028B49FEB00681AA6 /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4192C50F28B49FEB00681AA6 /* DownloadsViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		411A121F28DA46ED004DFD80 /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
 		4140A2AF28D84F00000C59EE /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		4192C50D28B49F2100681AA6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4192C50F28B49FEB00681AA6 /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				4140A2AF28D84F00000C59EE /* CollectionViewTableViewCell.swift */,
+				411A121F28DA46ED004DFD80 /* HeroHeaderUIView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				41C0E9CF28A4F8840005CAF4 /* UpcomingViewController.swift in Sources */,
 				4192C51228B49FFC00681AA6 /* SearchViewController.swift in Sources */,
 				4140A2B028D84F00000C59EE /* CollectionViewTableViewCell.swift in Sources */,
+				411A122028DA46ED004DFD80 /* HeroHeaderUIView.swift in Sources */,
 				41F54B1228A3770D008F79D6 /* MainTabViewController.swift in Sources */,
 				4192C51028B49FEB00681AA6 /* DownloadsViewController.swift in Sources */,
 				41F54B0E28A3770D008F79D6 /* AppDelegate.swift in Sources */,
