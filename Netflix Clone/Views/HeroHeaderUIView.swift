@@ -74,7 +74,6 @@ class HeroHeaderUIView: UIView {
         NSLayoutConstraint.activate(downloadButtonConstraints)
     }
     
-    
     override func layoutSubviews() {
         super.layoutSubviews()
         heroImageView.frame = bounds
