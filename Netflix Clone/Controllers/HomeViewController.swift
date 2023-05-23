@@ -19,7 +19,9 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
+       // view.backgroundColor = .systemBackground
+        view.overrideUserInterfaceStyle = .dark
+       
         view.addSubview(homeFeedtable)
         homeFeedtable.delegate = self
         homeFeedtable.dataSource = self
@@ -28,18 +30,16 @@ class HomeViewController: UIViewController {
         let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.height, height: 500))
         
         homeFeedtable.tableHeaderView = headerView
+        fetchData()
     }
+  
     
     private func configureNavbar() {
         
       var image = UIImage(named: "netflixlogo")
         image = image?.withRenderingMode(.alwaysOriginal)
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .done, target: self, action: nil)
-        
-        //        navigationItem.leftBarButtonItems = [
-        //            UIBarButtonItem(image: image , style: .done, target: self, action: nil)
-        //        ]
-        
+       
         navigationItem.rightBarButtonItems = [
             UIBarButtonItem(image: UIImage(systemName: "person") , style: .done, target: self, action: nil),
             UIBarButtonItem(image: UIImage(systemName: "play.rectangle"), style: .done, target: self, action: nil)
@@ -51,6 +51,14 @@ class HomeViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewWillLayoutSubviews()
         homeFeedtable.frame = view.bounds
+    }
+  
+    
+    private func fetchData() {
+       // APICaller.shared.getTrendingTvs{ results in }
+      //  APICaller.shared.getUpcomingMovies {_ in}
+        APICaller.shared.getPopular{_ in}
+        
     }
 }
 extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
@@ -87,5 +95,6 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
         header.textLabel?.frame = CGRect(x: header.bounds.origin.x + 20, y: header.bounds.origin.y, width: 100 , height: header.bounds.height)
         
         header.textLabel?.textColor = .white
+        header.textLabel?.text = header.textLabel?.text?.capitalizeFirstLetter()
     }
 }
